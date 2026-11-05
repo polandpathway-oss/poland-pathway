@@ -1,7 +1,6 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import heroPhoto from "@/assets/hero-move-to-poland.jpg";
 import { useEffect, useRef, useState } from "react";
-import { services } from "@/lib/services";
 import {
   ArrowIcon,
   CheckIcon,
@@ -201,38 +200,6 @@ function Index() {
           <div className="stat reveal"><Counter target={98} suffix="%" /><div className="lbl">Visa Success Rate</div></div>
           <div className="stat reveal"><Counter target={8} suffix="+" pad={2} /><div className="lbl">Partner Universities</div></div>
           <div className="stat reveal"><Counter target={15} suffix="+" /><div className="lbl">Cities Across Poland</div></div>
-        </div>
-      </section>
-
-      {/* ================= SERVICES ================= */}
-      <section className="section" id="services">
-        <div className="container">
-          <div className="section-head reveal">
-            <span className="eyebrow">What We Do</span>
-            <h2>End-to-End Support for Your Move to Poland</h2>
-            <p>Dedicated consultants guide every step online — so you can keep working while you plan your move.</p>
-          </div>
-          <div className="services-grid">
-            {services.map((s) => (
-              <Link
-                to="/services/$slug"
-                params={{ slug: s.slug }}
-                className="service-card reveal"
-                key={s.slug}
-              >
-                <div className="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="2">
-                    {s.icon}
-                  </svg>
-                </div>
-                <h3>{s.name}</h3>
-                <p>{s.cardText}</p>
-                <span className="service-more">
-                  Learn more <ArrowIcon />
-                </span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

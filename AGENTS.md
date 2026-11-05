@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- The homepage is a faithful port of the user's supplied HTML: its original class-based CSS lives in `src/poland-pathway.css` (imported from `src/styles.css`) so the page matches the source design exactly; extend that file rather than restyling with utilities.

@@ -26,8 +26,8 @@ describe("App routing", () => {
   });
 
   it("gives every service page a unique title and description", () => {
-    expect(services).toHaveLength(6);
-    expect(new Set(services.map((s) => s.metaTitle)).size).toBe(6);
-    expect(new Set(services.map((s) => s.metaDescription)).size).toBe(6);
+    expect(new Set(services.map((s) => s.slug)).size).toBe(services.length);
+    expect(new Set(services.map((s) => s.metaTitle)).size).toBe(services.length);
+    expect(new Set(services.map((s) => s.metaDescription)).size).toBe(services.length);
   });
 });

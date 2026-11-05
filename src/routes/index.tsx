@@ -238,7 +238,7 @@ function Index() {
       <section className="section why" id="why">
         <div className="container why-grid">
           <div className="why-visual reveal">
-            <h3>Top Destinations Our Students Choose</h3>
+            <h3>Top Universities Our Clients Choose</h3>
             <p>Poland's universities rank among Europe's best — at a fraction of the cost.</p>
             {universities.map((u) => (
               <div className="uni-row" key={u.name}>

@@ -1,6 +1,7 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
+@import "./poland-pathway.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -63,21 +64,21 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --background: oklch(0.981 0.003 247.86); /* #F7F8FA offwhite */
+  --foreground: oklch(0.372 0.039 257.29); /* #334155 slate */
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(0.372 0.039 257.29);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
-  --destructive: oklch(0.577 0.245 27.325);
+  --popover-foreground: oklch(0.372 0.039 257.29);
+  --primary: oklch(0.262 0.07 255.6); /* #0B2545 navy */
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.917 0.022 251.6); /* #DCE6F2 sky */
+  --secondary-foreground: oklch(0.262 0.07 255.6);
+  --muted: oklch(0.917 0.022 251.6);
+  --muted-foreground: oklch(0.52 0.035 255);
+  --accent: oklch(0.575 0.206 20.6); /* #D7263D crimson */
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.575 0.206 20.6);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);

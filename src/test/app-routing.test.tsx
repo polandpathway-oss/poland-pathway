@@ -3,6 +3,7 @@ import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
 import { services } from "@/lib/services";
+import { SOCIALS } from "@/components/site/site-parts";
 import { routeTree } from "@/routeTree.gen";
 
 // Match routes without running loaders or rendering: loaders may need a server or
@@ -36,5 +37,12 @@ describe("App routing", () => {
       expect(s.metaTitle.length).toBeLessThanOrEqual(60);
       expect(s.metaDescription.length).toBeLessThanOrEqual(160);
     }
+  });
+
+  it("points footer social icons at the real Poland Pathway profiles", () => {
+    expect(SOCIALS.facebook).toBe("https://www.facebook.com/p/Poland-Pathway-61595798983913/");
+    expect(SOCIALS.instagram).toBe("https://www.instagram.com/polandpathway/");
+    expect(SOCIALS.linkedin).toBe("https://www.linkedin.com/company/poland-pathway");
+    expect(SOCIALS.youtube).toBe("https://www.youtube.com/@PolandPathway");
   });
 });

@@ -45,4 +45,9 @@ describe("App routing", () => {
     expect(SOCIALS.linkedin).toBe("https://www.linkedin.com/company/poland-pathway");
     expect(SOCIALS.youtube).toBe("https://www.youtube.com/@PolandPathway");
   });
+
+  it("shows the confirmed phone number in the footer and call button", () => {
+    expect(PHONE).toBe("+46 76 444 46 34");
+    expect(PHONE_TEL).toBe("tel:+46764444634");
+  });
 });

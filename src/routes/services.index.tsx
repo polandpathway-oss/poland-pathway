@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { EUROPE_COUNTRIES, services } from "@/lib/services";
 import { ArrowIcon, CtaSection, SiteFooter, SiteHeader, WHATSAPP, useReveal } from "@/components/site/site-parts";
 
-const TITLE = "Move to Poland from Europe: Study Route Services | Poland Pathway";
+const TITLE = "Poland Relocation Services for Non-EU Nationals in Europe";
 const DESCRIPTION =
-  "Non-EU and working in Europe on a work or job-seeker permit? We guide your move to Poland — university admission, Polish study visa, housing and residence card.";
+  "Non-EU national on a work or job-seeker permit in Europe? Explore our Poland relocation services — admission, study visa, housing and residence card.";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({

@@ -48,7 +48,10 @@ export const Route = createFileRoute("/services/$slug")({
               email: "hello@polandpathway.com",
             },
             areaServed: { "@type": "Place", name: "Europe" },
-            audience: { "@type": "EducationalAudience", educationalRole: "student" },
+            audience: {
+              "@type": "Audience",
+              audienceType: "Non-EU nationals living in Europe on work or job-seeker permits",
+            },
           }),
         },
       ],
@@ -89,7 +92,7 @@ function ServicePage() {
             <Link to="/services" className="btn btn-outline">All Services</Link>
           </div>
           <div className="country-pills">
-            <span className="pill">For students across Europe</span>
+            <span className="pill">For non-EU residents of Europe</span>
             <span className="pill">Online consultations</span>
             <span className="pill">98% visa success rate</span>
           </div>
@@ -117,22 +120,25 @@ function ServicePage() {
         </div>
       </section>
 
-      {/* Europe */}
+      {/* Your situation in Europe */}
       <section className="section alt">
         <div className="container">
           <div className="section-head reveal">
-            <span className="eyebrow">Applying from Europe</span>
-            <h2>What This Means If You Live in Europe</h2>
-            <p>Your route to Poland depends on your citizenship — here's how it works for each group.</p>
+            <span className="eyebrow">Already Living in Europe?</span>
+            <h2>How This Works for Your Situation</h2>
+            <p>
+              Most of our clients are non-EU nationals already in Europe — either working on a permit or on a
+              job-seeker visa. Here's what this step means for you.
+            </p>
           </div>
           <div className="europe-grid">
             <div className="europe-card reveal">
-              <span className="europe-tag">EU / EEA & Swiss citizens</span>
-              <p>{service.europe.eu}</p>
+              <span className="europe-tag">On a work permit</span>
+              <p>{service.situations.workPermit}</p>
             </div>
             <div className="europe-card dark reveal">
-              <span className="europe-tag">Non-EU residents of Europe</span>
-              <p>{service.europe.nonEu}</p>
+              <span className="europe-tag">On a job-seeker visa</span>
+              <p>{service.situations.jobSeeker}</p>
             </div>
           </div>
         </div>

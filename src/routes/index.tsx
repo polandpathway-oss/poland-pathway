@@ -114,7 +114,7 @@ const testimonials = [
   },
   {
     quote:
-      "The mock interview sessions made the real visa interview feel easy. I even got a 50% merit scholarship I didn't know I was eligible for.",
+      "I was on a job-seeker visa in Germany and had no idea Poland's study route applied to me. They checked my documents first and told me honestly whether I qualified.",
     initials: "UM",
     name: "Usman Malik",
     detail: "BSc Engineering · WUT Warsaw",

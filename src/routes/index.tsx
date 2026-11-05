@@ -152,7 +152,7 @@ const whyItems = [
 
 const steps = [
   { title: "Free Consultation", text: "Profile evaluation, budget planning and a personalized university shortlist." },
-  { title: "Apply & Get Admitted", text: "We prepare and file your applications — admission letters typically arrive in 2–4 weeks." },
+  { title: "Apply & Get Admitted", text: "We coach you step by step to prepare and file your own application." },
   { title: "Visa Filing & Prep", text: "Complete documentation, financial proofs and one-on-one interview coaching." },
   { title: "Fly & Settle In", text: "Accommodation arranged, airport pickup and residence permit support on arrival." },
 ];

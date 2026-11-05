@@ -5,6 +5,13 @@ import { services } from "@/lib/services";
 
 export const WHATSAPP = "https://wa.me/46764444634";
 
+export const SOCIALS = {
+  facebook: "https://www.facebook.com/p/Poland-Pathway-61595798983913/",
+  instagram: "https://www.instagram.com/polandpathway/",
+  linkedin: "https://www.linkedin.com/company/poland-pathway",
+  youtube: "https://www.youtube.com/@PolandPathway",
+};
+
 export function ArrowIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">

@@ -204,38 +204,6 @@ function Index() {
         </div>
       </section>
 
-      {/* ================= SERVICES ================= */}
-      <section className="section" id="services">
-        <div className="container">
-          <div className="section-head reveal">
-            <span className="eyebrow">What We Do</span>
-            <h2>End-to-End Support for Your Move to Poland</h2>
-            <p>Dedicated consultants guide every step online — so you can keep working while you plan your move.</p>
-          </div>
-          <div className="services-grid">
-            {services.map((s) => (
-              <Link
-                to="/services/$slug"
-                params={{ slug: s.slug }}
-                className="service-card reveal"
-                key={s.slug}
-              >
-                <div className="service-icon">
-                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="2">
-                    {s.icon}
-                  </svg>
-                </div>
-                <h3>{s.name}</h3>
-                <p>{s.cardText}</p>
-                <span className="service-more">
-                  Learn more <ArrowIcon />
-                </span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ================= WHY POLAND ================= */}
       <section className="section why" id="why">
         <div className="container why-grid">

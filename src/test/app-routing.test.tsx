@@ -3,7 +3,7 @@ import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
 import { services } from "@/lib/services";
-import { SOCIALS } from "@/components/site/site-parts";
+import { PHONE, PHONE_TEL, SOCIALS } from "@/components/site/site-parts";
 import { routeTree } from "@/routeTree.gen";
 
 // Match routes without running loaders or rendering: loaders may need a server or

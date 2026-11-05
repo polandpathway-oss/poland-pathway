@@ -12,6 +12,9 @@ export const SOCIALS = {
   youtube: "https://www.youtube.com/@PolandPathway",
 };
 
+export const PHONE = "+46 76 444 46 34";
+export const PHONE_TEL = "tel:+46764444634";
+
 export function ArrowIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
@@ -112,7 +115,7 @@ export function CtaSection({
                 <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.1z" />
               </svg>
             </a>
-            <a href="tel:+46764444634" className="btn btn-white">+46 76 444 46 34</a>
+            <a href={PHONE_TEL} className="btn btn-white">{PHONE}</a>
           </div>
         </div>
       </div>
@@ -182,7 +185,7 @@ export function SiteFooter() {
             <h4>Contact</h4>
             <ul>
               <li>hello@polandpathway.com</li>
-              <li>+46 76 444 46 34</li>
+              <li>{PHONE}</li>
               <li>Mon to Sat · 9:00 to 18:00</li>
               <li>Warsaw · Kraków · Remote</li>
             </ul>

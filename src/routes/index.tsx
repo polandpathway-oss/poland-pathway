@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroSlide from "@/assets/slide-1-poland.png.asset.json";
+import heroPhoto from "@/assets/hero-move-to-poland.jpg";
 import { useEffect, useRef, useState } from "react";
 import {
   ArrowIcon,
@@ -10,6 +10,7 @@ import {
   WHATSAPP,
   useReveal,
 } from "@/components/site/site-parts";
+import { WelcomePopup } from "@/components/site/welcome-popup";
 
 const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
 const HOME_DESCRIPTION =
@@ -156,14 +157,38 @@ function Index() {
           </div>
 
           <div className="hero-visual reveal">
+            <div className="float-chip chip-1">
+              <div className="dot" style={{ background: "var(--sky)" }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="2.4">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <path d="M22 4L12 14l-3-3" />
+                </svg>
+              </div>
+              Visa Approved
+            </div>
             <div className="hero-photo">
               <img
-                src={heroSlide.url}
-                alt="Poland Pathway: residence permit expiring soon in Europe? See your options for moving to Poland"
-                width={1080}
-                height={1350}
+                src={heroPhoto}
+                alt="Non-EU professional arriving in Warsaw Old Town with a suitcase, moving to Poland"
+                width={1024}
+                height={1280}
                 fetchPriority="high"
               />
+              <div className="hero-photo-card">
+                <div>
+                  <div className="hp-title">National Study Visa · Type D</div>
+                  <div className="hp-sub">Republic of Poland</div>
+                </div>
+                <span className="vc-status">● Approved</span>
+              </div>
+            </div>
+            <div className="float-chip chip-2">
+              <div className="dot" style={{ background: "#ffe3e7" }}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D7263D" strokeWidth="2.4">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              Admission Letter Received
             </div>
           </div>
         </div>
@@ -263,6 +288,7 @@ function Index() {
 
       <CtaSection />
       <SiteFooter />
+      <WelcomePopup />
     </>
   );
 }

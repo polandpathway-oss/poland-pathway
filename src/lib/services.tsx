@@ -54,9 +54,9 @@ export const services: Service[] = [
         <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
       </>
     ),
-    metaTitle: "Move to Poland from Europe: Choose a University | Poland Pathway",
+    metaTitle: "Polish University Selection for Non-EU Nationals in Europe",
     metaDescription:
-      "Working in Europe on a non-EU permit and want to move to Poland? Get a free shortlist of Polish universities and English-taught courses that suit your career and budget.",
+      "Non-EU national living in Europe? Get a free shortlist of Polish universities and English-taught courses that fit your career, budget and move to Poland.",
     eyebrow: "Move to Poland · Study Route",
     h1: "Moving to Poland from Europe? Start with the",
     h1Highlight: "Right Course",
@@ -101,9 +101,9 @@ export const services: Service[] = [
         <path d="M14 2v6h6M9 15l2 2 4-4" />
       </>
     ),
-    metaTitle: "Polish University Admission for Non-EU Residents | Poland Pathway",
+    metaTitle: "Polish University Admission Help for Non-EU Nationals",
     metaDescription:
-      "Get admitted to a Polish university while living and working in Europe. We coach you through your SOP, apostilles, sworn translations and the full application.",
+      "Living in Europe on a non-EU permit? We coach you to prepare your SOP, apostilles and sworn translations and file your own Polish university application.",
     eyebrow: "Admissions · Documents",
     h1: "Get Your Polish University Admission —",
     h1Highlight: "While You Still Work",
@@ -148,9 +148,9 @@ export const services: Service[] = [
         <path d="M7 9h10M7 13h6" />
       </>
     ),
-    metaTitle: "Poland Study Visa for Non-EU Residents in Europe | Poland Pathway",
+    metaTitle: "Poland Study Visa (Type D) for Non-EU Nationals in Europe",
     metaDescription:
-      "On a work or job-seeker permit in Sweden, Germany or elsewhere in Europe? Get help applying for a Polish Type D study visa — documents, proof of funds and mock interviews.",
+      "On a work or job-seeker permit in Europe? Get expert guidance on the Polish Type D study visa — documents, proof of funds and interview preparation.",
     eyebrow: "Study Visa · Type D",
     h1: "Your Polish Study Visa,",
     h1Highlight: "Filed from Europe",
@@ -190,9 +190,9 @@ export const services: Service[] = [
     name: "Accommodation & Moving to Poland",
     cardText: "Dormitory or private housing options, airport pickup and a city orientation on day one.",
     icon: <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />,
-    metaTitle: "Moving to Poland from Europe: Housing & Arrival | Poland Pathway",
+    metaTitle: "Relocate to Poland from Europe: Housing & Arrival Help",
     metaDescription:
-      "Relocating to Poland from elsewhere in Europe? We line up student dorms or private flats in Warsaw, Kraków and more, plus airport pickup and help in your first week.",
+      "Moving to Poland from another European country? We find student dorms or flats in Warsaw, Kraków and more, plus airport pickup and first-week support.",
     eyebrow: "Housing · Relocation",
     h1: "Relocate to Poland Smoothly —",
     h1Highlight: "Home Ready Before You Land",
@@ -237,9 +237,9 @@ export const services: Service[] = [
         <path d="M12 6v6l4 2" />
       </>
     ),
-    metaTitle: "Poland Residence Card (TRC) & Work Rights | Poland Pathway",
+    metaTitle: "Poland Residence Card (Karta Pobytu) & Work Rights Guide",
     metaDescription:
-      "Get your Polish temporary residence card (karta pobytu) for studies, work while you study, and plan your stay after graduation. Guidance for non-EU nationals moving from Europe.",
+      "Non-EU national moving to Poland? Get guidance on your temporary residence card, working while you study and staying in Poland after graduation.",
     eyebrow: "Residence Card · Work",
     h1: "Stay, Work & Build Your Future in Poland —",
     h1Highlight: "Residence Card Support",

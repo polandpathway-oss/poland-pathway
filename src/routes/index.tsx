@@ -11,24 +11,24 @@ import {
   useReveal,
 } from "@/components/site/site-parts";
 
+export const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
+export const HOME_DESCRIPTION =
+  "Non-EU national in Europe? Get expert guidance on Poland work permits, work visas and relocation. We coach you to prepare and file your own application.";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Move to Poland from Europe — Study Visa Guidance | Poland Pathway" },
-      {
-        name: "description",
-        content:
-          "Non-EU and on a work or job-seeker permit in Europe? Poland Pathway guides your move to Poland through university admission, the Polish study visa and residence card.",
-      },
-      { property: "og:title", content: "Move to Poland from Europe — Study Visa Guidance | Poland Pathway" },
-      {
-        property: "og:description",
-        content:
-          "Admission, Polish study visa, housing and residence card for non-EU residents of Europe — with a 98% visa success rate.",
-      },
+      { title: HOME_TITLE },
+      { name: "description", content: HOME_DESCRIPTION },
+      { property: "og:title", content: HOME_TITLE },
+      { property: "og:description", content: HOME_DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: HOME_TITLE },
+      { name: "twitter:description", content: HOME_DESCRIPTION },
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Index,
 });

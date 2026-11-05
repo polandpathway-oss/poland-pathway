@@ -3,7 +3,7 @@ import { createRouter, rootRouteId } from "@tanstack/react-router";
 import { describe, expect, it } from "vitest";
 
 import { services } from "@/lib/services";
-import { SOCIALS } from "@/components/site/site-parts";
+import { PHONE, PHONE_TEL, SOCIALS } from "@/components/site/site-parts";
 import { routeTree } from "@/routeTree.gen";
 
 // Match routes without running loaders or rendering: loaders may need a server or
@@ -44,5 +44,10 @@ describe("App routing", () => {
     expect(SOCIALS.instagram).toBe("https://www.instagram.com/polandpathway/");
     expect(SOCIALS.linkedin).toBe("https://www.linkedin.com/company/poland-pathway");
     expect(SOCIALS.youtube).toBe("https://www.youtube.com/@PolandPathway");
+  });
+
+  it("shows the confirmed phone number in the footer and call button", () => {
+    expect(PHONE).toBe("+46 76 444 46 34");
+    expect(PHONE_TEL).toBe("tel:+46764444634");
   });
 });

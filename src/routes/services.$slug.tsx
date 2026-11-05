@@ -127,7 +127,7 @@ function ServicePage() {
             <span className="eyebrow">Already Living in Europe?</span>
             <h2>How This Works for Your Situation</h2>
             <p>
-              Most of our clients are non-EU nationals already in Europe — either working on a permit or on a
+              Most of our clients are non-EU nationals already in Europe, either working on a permit or on a
               job-seeker visa. Here's what this step means for you.
             </p>
           </div>

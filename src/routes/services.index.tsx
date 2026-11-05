@@ -4,7 +4,7 @@ import { ArrowIcon, CtaSection, SiteFooter, SiteHeader, WHATSAPP, useReveal } fr
 
 const TITLE = "Poland Relocation Services for Non-EU Nationals in Europe";
 const DESCRIPTION =
-  "Non-EU national on a work or job-seeker permit in Europe? Explore our Poland relocation services — admission, study visa, housing and residence card.";
+  "Non-EU national on a work or job-seeker permit in Europe? Explore our Poland relocation services: admission, study visa, housing and residence card.";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -57,7 +57,7 @@ function ServicesPage() {
           </h1>
           <p className="lead">
             On a work permit or job-seeker visa in Sweden, Germany or elsewhere in Europe? We guide non-EU nationals
-            through the study route to Poland — from university admission and the Polish visa to your residence card
+            through the study route to Poland, from university admission and the Polish visa to your residence card
             and the right to work while you study.
           </p>
           <div className="hero-actions">
@@ -74,7 +74,7 @@ function ServicesPage() {
           <div className="section-head reveal">
             <span className="eyebrow">Our Services</span>
             <h2>Five Steps We Handle for Your Move</h2>
-            <p>Pick the help you need, or let us guide the whole move end to end — online, in English, around your work.</p>
+            <p>Pick the help you need, or let us guide the whole move end to end: online, in English, around your work.</p>
           </div>
           <div className="services-grid">
             {services.map((s) => (

@@ -1,8 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import logo from "@/assets/poland-pathway-logo.png.asset.json";
-
-const WHATSAPP = "https://wa.me/46764444634";
+import { services } from "@/lib/services";
+import {
+  ArrowIcon,
+  CheckIcon,
+  CtaSection,
+  SiteFooter,
+  SiteHeader,
+  WHATSAPP,
+  useReveal,
+} from "@/components/site/site-parts";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,22 +32,6 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
-
-function ArrowIcon() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-      <path d="M5 12h14M13 6l6 6-6 6" />
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3">
-      <path d="M20 6L9 17l-5-5" />
-    </svg>
-  );
-}
 
 function Counter({ target, suffix, pad }: { target: number; suffix: string; pad?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -82,59 +73,6 @@ function Counter({ target, suffix, pad }: { target: number; suffix: string; pad?
     </div>
   );
 }
-
-const services = [
-  {
-    title: "University & Course Selection",
-    text: "Personalized shortlists from 40+ ranked Polish universities matched to your grades, budget and career goals.",
-    icon: (
-      <>
-        <path d="M22 10L12 5 2 10l10 5 10-5z" />
-        <path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5" />
-      </>
-    ),
-  },
-  {
-    title: "Admission & Documentation",
-    text: "SOP guidance, document attestation, translation and complete application filing — error-free and on time.",
-    icon: (
-      <>
-        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-        <path d="M14 2v6h6M9 15l2 2 4-4" />
-      </>
-    ),
-  },
-  {
-    title: "Visa Filing & Interview Prep",
-    text: "National visa (Type D) preparation, financial proof strategy and mock interviews with visa officers' insights.",
-    icon: (
-      <>
-        <rect x="3" y="4" width="18" height="16" rx="2" />
-        <path d="M7 9h10M7 13h6" />
-      </>
-    ),
-  },
-  {
-    title: "Scholarships & Funding",
-    text: "Access to Poland's NAWA programs, university merit scholarships and education loan assistance.",
-    icon: <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />,
-  },
-  {
-    title: "Accommodation & Arrival",
-    text: "Guaranteed dormitory or private housing options, airport pickup and a city-orientation on day one.",
-    icon: <path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6" />,
-  },
-  {
-    title: "Residence Permit & Beyond",
-    text: "TRC (temporary residence card) filing, part-time work guidance and post-study career pathways in the EU.",
-    icon: (
-      <>
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </>
-    ),
-  },
-];
 
 const universities = [
   { name: "University of Warsaw", rank: "QS World Top 300", city: "Warsaw" },
@@ -185,67 +123,11 @@ const testimonials = [
 ];
 
 function Index() {
-  const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  // Sticky header
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Scroll reveal
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add("visible");
-            io.unobserve(e.target);
-          }
-        });
-      },
-      { threshold: 0.12 },
-    );
-    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
-    return () => io.disconnect();
-  }, []);
-
-  const closeMenu = () => setMenuOpen(false);
+  useReveal();
 
   return (
     <>
-      {/* ================= HEADER ================= */}
-      <header id="header" className={scrolled ? "scrolled" : undefined}>
-        <div className="container nav">
-          <a href="#" className="logo">
-            <img src={logo.url} alt="Poland Pathway — Consultation Agency" className="logo-img" />
-          </a>
-          <ul className={menuOpen ? "nav-links open" : "nav-links"}>
-            <li><a href="#services" onClick={closeMenu}>Services</a></li>
-            <li><a href="#why" onClick={closeMenu}>Why Poland</a></li>
-            <li><a href="#process" onClick={closeMenu}>Process</a></li>
-            <li><a href="#stories" onClick={closeMenu}>Success Stories</a></li>
-            <li>
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="btn btn-crimson nav-cta">
-                Free Consultation
-              </a>
-            </li>
-          </ul>
-          <button
-            className="burger"
-            aria-label="Menu"
-            aria-expanded={menuOpen}
-            onClick={() => setMenuOpen((o) => !o)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* ================= HERO ================= */}
       <section className="hero">
@@ -330,15 +212,23 @@ function Index() {
           </div>
           <div className="services-grid">
             {services.map((s) => (
-              <div className="service-card reveal" key={s.title}>
+              <Link
+                to="/services/$slug"
+                params={{ slug: s.slug }}
+                className="service-card reveal"
+                key={s.slug}
+              >
                 <div className="service-icon">
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B2545" strokeWidth="2">
                     {s.icon}
                   </svg>
                 </div>
-                <h3>{s.title}</h3>
-                <p>{s.text}</p>
-              </div>
+                <h3>{s.name}</h3>
+                <p>{s.cardText}</p>
+                <span className="service-more">
+                  Learn more <ArrowIcon />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -426,103 +316,8 @@ function Index() {
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
-      <section className="cta" id="contact">
-        <div className="container">
-          <div className="cta-box reveal">
-            <h2>Ready to Begin Your Poland Pathway?</h2>
-            <p>
-              Book a free 30-minute consultation with a senior counsellor. No fees, no obligation — just a clear plan
-              for your future.
-            </p>
-            <div className="cta-actions">
-              <a href={WHATSAPP} target="_blank" rel="noopener" className="btn btn-crimson">
-                Book Free Consultation
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.9 2.1c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 .9c.3.2.5.3.6.4.1.2.1.7-.1 1.1z" />
-                </svg>
-              </a>
-              <a href="tel:+48000000000" className="btn btn-white">+48 000 000 000</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ================= FOOTER ================= */}
-      <footer>
-        <div className="container">
-          <div className="footer-grid">
-            <div className="footer-about">
-              <a href="#">
-                <img src={logo.url} alt="Poland Pathway — Consultation Agency" className="logo-img" />
-              </a>
-              <p>
-                Trusted study-abroad consultancy specializing in Polish higher education — admissions, visas and
-                settlement, done right.
-              </p>
-              <div className="socials">
-                <a href="#" aria-label="Facebook">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
-                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="Instagram">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
-                    <rect x="2" y="2" width="20" height="20" rx="5" />
-                    <circle cx="12" cy="12" r="4" />
-                    <circle cx="17.5" cy="6.5" r="1" fill="#fff" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="LinkedIn">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
-                    <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.5h4.52V23H.24zM8.34 8.5h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.5V23H8.34z" />
-                  </svg>
-                </a>
-                <a href="#" aria-label="YouTube">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
-                    <path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 4 12 4 12 4s-4.6 0-7.7.2c-.4.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.6 0 7.7-.3c.4-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.7-.2-3.7zM9.8 15.3V8.7l6 3.3-6 3.3z" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4>Services</h4>
-              <ul>
-                <li><a href="#services">University Selection</a></li>
-                <li><a href="#services">Admissions</a></li>
-                <li><a href="#services">Visa Filing</a></li>
-                <li><a href="#services">Scholarships</a></li>
-                <li><a href="#services">Residence Permit</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Popular Cities</h4>
-              <ul>
-                <li><a href="#why">Warsaw</a></li>
-                <li><a href="#why">Kraków</a></li>
-                <li><a href="#why">Wrocław</a></li>
-                <li><a href="#why">Poznań</a></li>
-                <li><a href="#why">Gdańsk</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4>Contact</h4>
-              <ul>
-                <li>hello@polandpathway.com</li>
-                <li>+48 000 000 000</li>
-                <li>Mon–Sat · 9:00–18:00</li>
-                <li>Warsaw · Kraków · Remote</li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <span>© 2026 Poland Pathway. All rights reserved.</span>
-            <span>
-              Made with <em>♥</em> for students going global
-            </span>
-          </div>
-        </div>
-      </footer>
+      <CtaSection />
+      <SiteFooter />
     </>
   );
 }

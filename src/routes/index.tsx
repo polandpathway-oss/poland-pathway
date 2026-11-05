@@ -14,17 +14,17 @@ import {
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Poland Pathway — Your Gateway to Studying in Poland" },
+      { title: "Move to Poland from Europe — Study Visa Guidance | Poland Pathway" },
       {
         name: "description",
         content:
-          "Poland Pathway is a premium study-abroad consultancy helping students secure admissions, visas and a new life in Poland.",
+          "Non-EU and on a work or job-seeker permit in Europe? Poland Pathway guides your move to Poland through university admission, the Polish study visa and residence card.",
       },
-      { property: "og:title", content: "Poland Pathway — Your Gateway to Studying in Poland" },
+      { property: "og:title", content: "Move to Poland from Europe — Study Visa Guidance | Poland Pathway" },
       {
         property: "og:description",
         content:
-          "Admissions, student visas and settlement in Poland — handled end-to-end with a 98% visa success rate.",
+          "Admission, Polish study visa, housing and residence card for non-EU residents of Europe — with a 98% visa success rate.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -82,17 +82,17 @@ const universities = [
 ];
 
 const whyItems = [
-  { title: "Affordable Tuition & Living", text: "Tuition from €1,500/year and living costs 40–60% lower than Western Europe." },
-  { title: "Globally Recognized Degrees", text: "Bologna-process degrees respected across the EU, UK and worldwide." },
-  { title: "Work While You Study", text: "International students can work part-time with no separate work permit." },
-  { title: "Vibrant Student Life", text: "Safe, welcoming cities with 57,000+ international students already thriving." },
+  { title: "Work While You Study", text: "Full-time students with a Polish study visa or residence card can generally work without a separate work permit." },
+  { title: "Affordable Tuition & Living", text: "Tuition from €1,500/year and living costs 40–60% lower than Western and Northern Europe." },
+  { title: "Stay Inside Schengen", text: "A Polish residence card keeps you in Europe and lets you travel across the Schengen area." },
+  { title: "A Path Beyond Graduation", text: "An EU-recognised degree, a job-search permit after graduation and routes to a work permit or EU Blue Card." },
 ];
 
 const steps = [
-  { title: "Free Consultation", text: "Profile evaluation, budget planning and a personalized university shortlist." },
+  { title: "Free Consultation", text: "Residence status check, budget planning and a personalized university shortlist." },
   { title: "Apply & Get Admitted", text: "We coach you step by step to prepare and file your own application." },
   { title: "Visa Filing & Prep", text: "Complete documentation, financial proofs and one-on-one interview coaching." },
-  { title: "Fly & Settle In", text: "Accommodation arranged, airport pickup and residence permit support on arrival." },
+  { title: "Fly & Settle In", text: "Housing arranged, airport pickup and residence card support once you arrive." },
 ];
 
 const testimonials = [
@@ -133,13 +133,13 @@ function Index() {
       <section className="hero">
         <div className="container hero-grid">
           <div>
-            <span className="eyebrow">Study in Poland · Visa Experts</span>
+            <span className="eyebrow">Non-EU in Europe? Move to Poland</span>
             <h1>
-              Your Gateway to a <span className="hl">European Degree</span> Starts Here
+              Your Next Move in Europe Is <span className="hl">Poland</span>
             </h1>
             <p className="lead">
-              From university selection to visa approval and landing in Warsaw — Poland Pathway handles every step
-              of your study-abroad journey with a 98% success rate.
+              On a work permit or job-seeker visa in Sweden, Germany or elsewhere in Europe? We guide non-EU
+              nationals through the study route to Poland — admission, visa and settling in — with a 98% success rate.
             </p>
             <div className="hero-actions">
               <a href={WHATSAPP} target="_blank" rel="noopener" className="btn btn-crimson">
@@ -207,8 +207,8 @@ function Index() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">What We Do</span>
-            <h2>End-to-End Support for Your Polish Adventure</h2>
-            <p>Every detail handled by dedicated consultants — so you can focus on packing, not paperwork.</p>
+            <h2>End-to-End Support for Your Move to Poland</h2>
+            <p>Dedicated consultants guide every step online — so you can keep working while you plan your move.</p>
           </div>
           <div className="services-grid">
             {services.map((s) => (
@@ -238,7 +238,7 @@ function Index() {
       <section className="section why" id="why">
         <div className="container why-grid">
           <div className="why-visual reveal">
-            <h3>Top Destinations Our Students Choose</h3>
+            <h3>Top Universities Our Clients Choose</h3>
             <p>Poland's universities rank among Europe's best — at a fraction of the cost.</p>
             {universities.map((u) => (
               <div className="uni-row" key={u.name}>
@@ -253,7 +253,7 @@ function Index() {
           <div>
             <div className="section-head reveal" style={{ marginBottom: 36 }}>
               <span className="eyebrow">Why Poland</span>
-              <h2>Europe-Quality Education, Without the Europe-Level Debt</h2>
+              <h2>Why Non-EU Professionals Are Choosing Poland</h2>
             </div>
             <div className="why-list">
               {whyItems.map((w) => (
@@ -275,8 +275,8 @@ function Index() {
         <div className="container">
           <div className="section-head reveal" style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
             <span className="eyebrow" style={{ justifyContent: "center" }}>How It Works</span>
-            <h2>Four Steps to Your Polish Student Visa</h2>
-            <p>A clear, guided roadmap — most students receive their visa within 4–8 weeks.</p>
+            <h2>Four Steps to Moving to Poland</h2>
+            <p>A clear, guided roadmap — most of our clients receive their visa within 4–8 weeks.</p>
           </div>
           <div className="process-steps">
             {steps.map((s, i) => (
@@ -295,8 +295,8 @@ function Index() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Success Stories</span>
-            <h2>2,400+ Students Are Already There</h2>
-            <p>Real journeys, real approvals — hear it from our students and their families.</p>
+            <h2>People Who Made the Move to Poland</h2>
+            <p>Real journeys, real approvals — hear it from the people we have guided.</p>
           </div>
           <div className="testi-grid">
             {testimonials.map((t) => (

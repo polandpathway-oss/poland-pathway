@@ -123,8 +123,8 @@ export function SiteFooter() {
               <img src={logo.url} alt="Poland Pathway — Consultation Agency" className="logo-img" />
             </Link>
             <p>
-              Trusted study-abroad consultancy specializing in Polish higher education — admissions, visas and
-              settlement, done right.
+              Helping non-EU residents of Europe move to Poland — university admission, study visas and settlement,
+              done right.
             </p>
             <div className="socials">
               <a href="#" aria-label="Facebook">
@@ -184,7 +184,7 @@ export function SiteFooter() {
         <div className="footer-bottom">
           <span>© 2026 Poland Pathway. All rights reserved.</span>
           <span>
-            Made with <em>♥</em> for students going global
+            Made with <em>♥</em> for people moving to Poland
           </span>
         </div>
       </div>

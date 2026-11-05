@@ -42,7 +42,7 @@ function CheckIcon() {
   );
 }
 
-function Counter({ target, suffix }: { target: number; suffix: string }) {
+function Counter({ target, suffix, pad }: { target: number; suffix: string; pad?: number }) {
   const ref = useRef<HTMLDivElement>(null);
   const [value, setValue] = useState(0);
 
@@ -77,7 +77,7 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
 
   return (
     <div className="num" ref={ref}>
-      {value.toLocaleString()}
+      {pad ? String(value).padStart(pad, "0") : value.toLocaleString()}
       <em>{suffix}</em>
     </div>
   );
@@ -267,9 +267,9 @@ function Index() {
               <a href="#process" className="btn btn-outline">How It Works</a>
             </div>
             <div className="hero-trust">
-              <div className="trust-item"><div><div className="num">2,400+</div><div className="lbl">Visas Approved</div></div></div>
-              <div className="trust-item"><div><div className="num">40+</div><div className="lbl">Partner Universities</div></div></div>
-              <div className="trust-item"><div><div className="num">12 yrs</div><div className="lbl">Consultancy Experience</div></div></div>
+              <div className="trust-item"><div><div className="num">45+</div><div className="lbl">Visas Approved</div></div></div>
+              <div className="trust-item"><div><div className="num">08+</div><div className="lbl">Partner Universities</div></div></div>
+              <div className="trust-item"><div><div className="num">3 yrs</div><div className="lbl">Consultancy Experience</div></div></div>
             </div>
           </div>
 
@@ -313,9 +313,9 @@ function Index() {
       {/* ================= STATS ================= */}
       <section className="stats">
         <div className="container stats-grid">
-          <div className="stat reveal"><Counter target={2400} suffix="+" /><div className="lbl">Student Visas Approved</div></div>
+          <div className="stat reveal"><Counter target={45} suffix="+" /><div className="lbl">Student Visas Approved</div></div>
           <div className="stat reveal"><Counter target={98} suffix="%" /><div className="lbl">Visa Success Rate</div></div>
-          <div className="stat reveal"><Counter target={40} suffix="+" /><div className="lbl">Partner Universities</div></div>
+          <div className="stat reveal"><Counter target={8} suffix="+" pad={2} /><div className="lbl">Partner Universities</div></div>
           <div className="stat reveal"><Counter target={15} suffix="+" /><div className="lbl">Cities Across Poland</div></div>
         </div>
       </section>

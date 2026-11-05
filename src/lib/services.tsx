@@ -194,7 +194,7 @@ export const services: Service[] = [
     metaDescription:
       "Moving to Poland from another European country? We find student dorms or flats in Warsaw, Kraków and more, plus airport pickup and first-week support.",
     eyebrow: "Housing · Relocation",
-    h1: "Relocate to Poland Smoothly",
+    h1: "Relocate to Poland Smoothly,",
     h1Highlight: "Home Ready Before You Land",
     lead:
       "Moving countries again is a big step. We line up safe, affordable housing near your campus, help you plan the move from your current country and meet you at the airport on day one.",
@@ -242,7 +242,7 @@ export const services: Service[] = [
       "Non-EU national moving to Poland? Get guidance on your temporary residence card, working while you study and staying in Poland after graduation.",
     eyebrow: "Residence Card · Work",
     h1: "Stay, Work & Build Your Future in Poland",
-    h1Highlight: "Residence Card Support",
+    h1Highlight: "With Residence Card Support",
     lead:
       "Once you've arrived, we help you file your temporary residence card (TRC), understand your right to work while studying and plan your next steps after graduation, from job search to a work-based permit.",
     includesTitle: "How We Help You Stay in Poland",

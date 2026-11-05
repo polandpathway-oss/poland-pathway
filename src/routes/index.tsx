@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import heroPhoto from "@/assets/hero-move-to-poland.jpg";
 import { useEffect, useRef, useState } from "react";
 import { services } from "@/lib/services";
 import {
@@ -165,19 +166,20 @@ function Index() {
               </div>
               Visa Approved
             </div>
-            <div className="visa-card">
-              <div className="vc-top">
+            <div className="hero-photo">
+              <img
+                src={heroPhoto}
+                alt="Non-EU professional arriving in Warsaw Old Town with a suitcase, moving to Poland"
+                width={1024}
+                height={1280}
+                fetchPriority="high"
+              />
+              <div className="hero-photo-card">
                 <div>
-                  <div className="vc-name">National Study Visa</div>
-                  <div style={{ fontSize: ".8rem", color: "#b9c6d8" }}>Republic of Poland · Type D</div>
+                  <div className="hp-title">National Study Visa · Type D</div>
+                  <div className="hp-sub">Republic of Poland</div>
                 </div>
-                <span className="vc-badge">Priority</span>
-              </div>
-              <div className="vc-rows">
-                <div className="vc-row"><span>Application status</span><span className="vc-status">● Approved</span></div>
-                <div className="vc-row"><span>University</span><b>University of Warsaw</b></div>
-                <div className="vc-row"><span>Program</span><b>MSc Computer Science</b></div>
-                <div className="vc-row"><span>Processing time</span><b>21 days</b></div>
+                <span className="vc-status">● Approved</span>
               </div>
             </div>
             <div className="float-chip chip-2">

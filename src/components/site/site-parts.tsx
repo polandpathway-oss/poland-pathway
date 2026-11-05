@@ -64,7 +64,7 @@ export function SiteHeader() {
     <header id="header" className={scrolled ? "scrolled" : undefined}>
       <div className="container nav">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src={logo.url} alt="Poland Pathway — Consultation Agency" className="logo-img" />
+          <img src={logo.url} alt="Poland Pathway Consultation Agency" className="logo-img" />
         </Link>
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
           <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
@@ -94,7 +94,7 @@ export function SiteHeader() {
 
 export function CtaSection({
   title = "Ready to Begin Your Poland Pathway?",
-  text = "Book a free 30-minute consultation with a senior counsellor. No fees, no obligation — just a clear plan for your future.",
+  text = "Book a free 30-minute consultation with a senior counsellor. No fees, no obligation, just a clear plan for your future.",
 }: {
   title?: string;
   text?: string;
@@ -127,10 +127,10 @@ export function SiteFooter() {
         <div className="footer-grid">
           <div className="footer-about">
             <Link to="/">
-              <img src={logo.url} alt="Poland Pathway — Consultation Agency" className="logo-img" />
+              <img src={logo.url} alt="Poland Pathway Consultation Agency" className="logo-img" />
             </Link>
             <p>
-              Helping non-EU residents of Europe move to Poland — university admission, study visas and settlement,
+              Helping non-EU residents of Europe move to Poland: university admission, study visas and settlement,
               done right.
             </p>
             <div className="socials">
@@ -183,7 +183,7 @@ export function SiteFooter() {
             <ul>
               <li>hello@polandpathway.com</li>
               <li>+48 000 000 000</li>
-              <li>Mon–Sat · 9:00–18:00</li>
+              <li>Mon to Sat · 9:00 to 18:00</li>
               <li>Warsaw · Kraków · Remote</li>
             </ul>
           </div>

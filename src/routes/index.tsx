@@ -83,7 +83,7 @@ const universities = [
 
 const whyItems = [
   { title: "Work While You Study", text: "Full-time students with a Polish study visa or residence card can generally work without a separate work permit." },
-  { title: "Affordable Tuition & Living", text: "Tuition from €1,500/year and living costs 40–60% lower than Western and Northern Europe." },
+  { title: "Affordable Tuition & Living", text: "Tuition from €1,500/year and living costs 40 to 60% lower than Western and Northern Europe." },
   { title: "Stay Inside Schengen", text: "A Polish residence card keeps you in Europe and lets you travel across the Schengen area." },
   { title: "A Path Beyond Graduation", text: "An EU-recognised degree, a job-search permit after graduation and routes to a work permit or EU Blue Card." },
 ];
@@ -98,7 +98,7 @@ const steps = [
 const testimonials = [
   {
     quote:
-      "My visa was rejected once before I found Poland Pathway. They rebuilt my file from scratch — approved in 19 days. I'm now in my second semester at AGH Kraków.",
+      "My visa was rejected once before I found Poland Pathway. They rebuilt my file from scratch and got it approved in 19 days. I'm now in my second semester at AGH Kraków.",
     initials: "AK",
     name: "Ahmed Khan",
     detail: "MSc Data Science · AGH Kraków",
@@ -139,7 +139,7 @@ function Index() {
             </h1>
             <p className="lead">
               On a work permit or job-seeker visa in Sweden, Germany or elsewhere in Europe? We guide non-EU
-              nationals through the study route to Poland — admission, visa and settling in — with a 98% success rate.
+              nationals through the study route to Poland: admission, visa and settling in, with a 98% success rate.
             </p>
             <div className="hero-actions">
               <a href={WHATSAPP} target="_blank" rel="noopener" className="btn btn-crimson">
@@ -208,7 +208,7 @@ function Index() {
         <div className="container why-grid">
           <div className="why-visual reveal">
             <h3>Top Universities Our Clients Choose</h3>
-            <p>Poland's universities rank among Europe's best — at a fraction of the cost.</p>
+            <p>Poland's universities rank among Europe's best, at a fraction of the cost.</p>
             {universities.map((u) => (
               <div className="uni-row" key={u.name}>
                 <div>
@@ -245,7 +245,7 @@ function Index() {
           <div className="section-head reveal" style={{ textAlign: "center", marginLeft: "auto", marginRight: "auto" }}>
             <span className="eyebrow" style={{ justifyContent: "center" }}>How It Works</span>
             <h2>Four Steps to Moving to Poland</h2>
-            <p>A clear, guided roadmap — most of our clients receive their visa within 4–8 weeks.</p>
+            <p>A clear, guided roadmap. Most of our clients receive their visa within 4 to 8 weeks.</p>
           </div>
           <div className="process-steps">
             {steps.map((s, i) => (
@@ -265,7 +265,7 @@ function Index() {
           <div className="section-head reveal">
             <span className="eyebrow">Success Stories</span>
             <h2>People Who Made the Move to Poland</h2>
-            <p>Real journeys, real approvals — hear it from the people we have guided.</p>
+            <p>Real journeys, real approvals. Hear it from the people we have guided.</p>
           </div>
           <div className="testi-grid">
             {testimonials.map((t) => (

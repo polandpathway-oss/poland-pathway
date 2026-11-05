@@ -78,10 +78,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Poland Pathway — Poland Visa & Relocation Guidance" },
+      { title: "Poland Pathway | Poland Visa & Relocation Guidance" },
       { name: "description", content: "Poland Pathway guides non-EU nationals living in Europe on Poland work permits, visas, study routes and relocation." },
       { name: "author", content: "Poland Pathway" },
-      { property: "og:title", content: "Poland Pathway — Poland Visa & Relocation Guidance" },
+      { property: "og:title", content: "Poland Pathway | Poland Visa & Relocation Guidance" },
       { property: "og:description", content: "Poland Pathway guides non-EU nationals living in Europe on Poland work permits, visas, study routes and relocation." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

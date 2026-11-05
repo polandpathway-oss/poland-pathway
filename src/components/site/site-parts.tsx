@@ -134,24 +134,24 @@ export function SiteFooter() {
               done right.
             </p>
             <div className="socials">
-              <a href="#" aria-label="Facebook">
+              <a href={SOCIALS.facebook} target="_blank" rel="noopener" aria-label="Facebook">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                 </svg>
               </a>
-              <a href="#" aria-label="Instagram">
+              <a href={SOCIALS.instagram} target="_blank" rel="noopener" aria-label="Instagram">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2">
                   <rect x="2" y="2" width="20" height="20" rx="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1" fill="#fff" />
                 </svg>
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a href={SOCIALS.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
                   <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.5h4.52V23H.24zM8.34 8.5h4.33v2h.06c.6-1.14 2.07-2.34 4.27-2.34 4.56 0 5.4 3 5.4 6.9V23h-4.5v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.53 1.72-2.53 3.5V23H8.34z" />
                 </svg>
               </a>
-              <a href="#" aria-label="YouTube">
+              <a href={SOCIALS.youtube} target="_blank" rel="noopener" aria-label="YouTube">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff">
                   <path d="M23 7.5s-.2-1.6-.9-2.3c-.9-.9-1.9-.9-2.4-1C16.6 4 12 4 12 4s-4.6 0-7.7.2c-.4.1-1.5.1-2.4 1-.7.7-.9 2.3-.9 2.3S.8 9.4.8 11.3v1.4c0 1.9.2 3.8.2 3.8s.2 1.6.9 2.3c.9.9 2 .9 2.5 1 1.8.2 7.6.2 7.6.2s4.6 0 7.7-.3c.4-.1 1.5-.1 2.4-1 .7-.7.9-2.3.9-2.3s.2-1.9.2-3.8v-1.4c0-1.9-.2-3.7-.2-3.7zM9.8 15.3V8.7l6 3.3-6 3.3z" />
                 </svg>

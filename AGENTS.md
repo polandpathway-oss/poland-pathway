@@ -32,3 +32,4 @@ use the editor.
 ## Project rules
 
 - The homepage is a faithful port of the user's supplied HTML: its original class-based CSS lives in `src/poland-pathway.css` (imported from `src/styles.css`) so the page matches the source design exactly; extend that file rather than restyling with utilities.
+- Service pages are data-driven: all service copy, SEO titles and FAQs live in `src/lib/services.tsx`, rendered by `src/routes/services.$slug.tsx`; header, footer, CTA and reveal hook are shared from `src/components/site/site-parts.tsx` so every page stays identical.

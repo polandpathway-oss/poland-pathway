@@ -2,9 +2,9 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { EUROPE_COUNTRIES, services } from "@/lib/services";
 import { ArrowIcon, CtaSection, SiteFooter, SiteHeader, WHATSAPP, useReveal } from "@/components/site/site-parts";
 
-const TITLE = "Study in Poland Services for Students in Europe | Poland Pathway";
+const TITLE = "Move to Poland from Europe: Study Route Services | Poland Pathway";
 const DESCRIPTION =
-  "Admissions, Poland student visas, scholarships, accommodation and residence permits — end-to-end study-in-Poland support for students living across Europe.";
+  "Non-EU and working in Europe on a work or job-seeker permit? We guide your move to Poland — university admission, Polish study visa, housing and residence card.";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
@@ -51,13 +51,14 @@ function ServicesPage() {
             <span>/</span>
             <span aria-current="page">Services</span>
           </nav>
-          <span className="eyebrow">Study in Poland from Europe</span>
+          <span className="eyebrow">Non-EU in Europe? Move to Poland</span>
           <h1>
-            Everything You Need to <span className="hl">Study in Poland</span>
+            Your Legal Route to <span className="hl">Live & Work in Poland</span>
           </h1>
           <p className="lead">
-            Living in the UK, Germany, Sweden or anywhere else in Europe? From choosing a university to your residence
-            card, Poland Pathway guides you through every step — online, in English, at your pace.
+            On a work permit or job-seeker visa in Sweden, Germany or elsewhere in Europe? We guide non-EU nationals
+            through the study route to Poland — from university admission and the Polish visa to your residence card
+            and the right to work while you study.
           </p>
           <div className="hero-actions">
             <a href={WHATSAPP} target="_blank" rel="noopener" className="btn btn-crimson">
@@ -72,8 +73,8 @@ function ServicesPage() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Our Services</span>
-            <h2>Six Ways We Get You to Poland</h2>
-            <p>Pick the help you need, or let us handle the whole journey end to end.</p>
+            <h2>Five Steps We Handle for Your Move</h2>
+            <p>Pick the help you need, or let us guide the whole move end to end — online, in English, around your work.</p>
           </div>
           <div className="services-grid">
             {services.map((s) => (
@@ -103,10 +104,10 @@ function ServicesPage() {
         <div className="container">
           <div className="section-head reveal">
             <span className="eyebrow">Across Europe</span>
-            <h2>Supporting Students Wherever You Live in Europe</h2>
+            <h2>Helping Non-EU Residents Across Europe</h2>
             <p>
-              Consultations run online, so you can plan your move to Poland from home. We regularly help students living
-              in:
+              Consultations run online, so you can plan your move without leaving your job. We regularly help people
+              living and working in:
             </p>
           </div>
           <div className="country-pills reveal">

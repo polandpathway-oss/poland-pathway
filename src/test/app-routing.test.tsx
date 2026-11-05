@@ -30,4 +30,11 @@ describe("App routing", () => {
     expect(new Set(services.map((s) => s.metaTitle)).size).toBe(services.length);
     expect(new Set(services.map((s) => s.metaDescription)).size).toBe(services.length);
   });
+
+  it("keeps service titles within 60 and descriptions within 160 characters", () => {
+    for (const s of services) {
+      expect(s.metaTitle.length).toBeLessThanOrEqual(60);
+      expect(s.metaDescription.length).toBeLessThanOrEqual(160);
+    }
+  });
 });

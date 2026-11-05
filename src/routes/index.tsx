@@ -11,8 +11,8 @@ import {
   useReveal,
 } from "@/components/site/site-parts";
 
-export const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
-export const HOME_DESCRIPTION =
+const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
+const HOME_DESCRIPTION =
   "Non-EU national in Europe? Get expert guidance on Poland work permits, work visas and relocation. We coach you to prepare and file your own application.";
 
 export const Route = createFileRoute("/")({

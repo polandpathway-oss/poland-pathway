@@ -10,6 +10,7 @@ import {
   WHATSAPP,
   useReveal,
 } from "@/components/site/site-parts";
+import { WelcomePopup } from "@/components/site/welcome-popup";
 
 const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
 const HOME_DESCRIPTION =
@@ -287,6 +288,7 @@ function Index() {
 
       <CtaSection />
       <SiteFooter />
+      <WelcomePopup />
     </>
   );
 }

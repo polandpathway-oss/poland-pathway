@@ -185,12 +185,15 @@
     .nav-links{display:none}
     .burger{display:block}
     .chip-1{left:0}
+    .hero{padding:126px 0 90px}
+    .page-hero{padding:120px 0 64px}
   }
   @media (max-width:620px){
     .services-grid,.testi-grid,.process-steps,.footer-grid{grid-template-columns:1fr}
     .section{padding:72px 0}
     .cta-box{padding:52px 28px}
-    .hero{padding:150px 0 90px}
+    .hero{padding:116px 0 70px}
+    .page-hero{padding:110px 0 56px}
   }
 
   /* ---------- Mobile menu (burger toggle) ---------- */

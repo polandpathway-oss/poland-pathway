@@ -5,7 +5,7 @@ import { describe, expect, it } from "vitest";
 import { services } from "@/lib/services";
 import { PHONE, PHONE_TEL, SOCIALS } from "@/components/site/site-parts";
 import { routeTree } from "@/routeTree.gen";
-import { HOME_SHARE_IMAGE, socialMeta } from "@/lib/seo";
+import { socialMeta } from "@/lib/seo";
 
 // Match routes without running loaders or rendering: loaders may need a server or
 // network the test run lacks, and jsdom never loads the stylesheets React waits on.
@@ -48,11 +48,12 @@ describe("App routing", () => {
   });
 
   it("builds absolute share links on the published domain", () => {
-    const { meta, links } = socialMeta({ title: "T", description: "D", path: "/services", image: HOME_SHARE_IMAGE });
+    const { meta, links } = socialMeta({ title: "T", description: "D", path: "/services" });
     const get = (key: string) => meta.find((m) => m.property === key || m.name === key)?.content;
     expect(get("og:url")).toBe("https://polandpathway.lovable.app/services");
     expect(links[0]?.href).toBe("https://polandpathway.lovable.app/services");
-    expect(get("og:image")).toBe("https://polandpathway.lovable.app/og/poland-pathway-home.jpg");
+    // Every page shares the main logo card
+    expect(get("og:image")).toBe("https://polandpathway.lovable.app/og/poland-pathway-logo.jpg");
     expect(get("twitter:image")).toBe(get("og:image"));
   });
 

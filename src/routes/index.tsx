@@ -11,7 +11,7 @@ import {
   useReveal,
 } from "@/components/site/site-parts";
 import { WelcomePopup } from "@/components/site/welcome-popup";
-import { HOME_SHARE_IMAGE, socialMeta } from "@/lib/seo";
+import { socialMeta } from "@/lib/seo";
 
 const HOME_TITLE = "Poland Work Permit Guidance for Non-EU Nationals in Europe";
 const HOME_DESCRIPTION =
@@ -24,7 +24,6 @@ export const Route = createFileRoute("/")({
       description: HOME_DESCRIPTION,
       path: "/",
       type: "website",
-      image: HOME_SHARE_IMAGE,
     }),
   component: Index,
 });

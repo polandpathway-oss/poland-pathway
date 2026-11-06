@@ -4,12 +4,12 @@ export const SITE_NAME = "Poland Pathway";
 
 export type ShareImage = { path: string; width: number; height: number; alt: string };
 
-/** Share-sized (1200x630) copy of the homepage hero photo, served from /public. */
-export const HOME_SHARE_IMAGE: ShareImage = {
-  path: "/og/poland-pathway-home.jpg",
+/** Share-sized (1200x630) card with the main Poland Pathway logo, used on every page. */
+export const SHARE_IMAGE: ShareImage = {
+  path: "/og/poland-pathway-logo.jpg",
   width: 1200,
   height: 630,
-  alt: "Young professional with a suitcase in Warsaw Old Town at sunset, moving to Poland",
+  alt: "Poland Pathway Consultation Agency logo",
 };
 
 export const absoluteUrl = (path: string) => `${SITE_URL}${path === "/" ? "/" : path}`;
@@ -39,18 +39,17 @@ export function socialMeta(opts: {
     { name: "twitter:title", content: opts.title },
     { name: "twitter:description", content: opts.description },
   ];
-  if (opts.image) {
-    const img = absoluteUrl(opts.image.path);
-    meta.push(
-      { property: "og:image", content: img },
-      { property: "og:image:secure_url", content: img },
-      { property: "og:image:type", content: "image/jpeg" },
-      { property: "og:image:width", content: String(opts.image.width) },
-      { property: "og:image:height", content: String(opts.image.height) },
-      { property: "og:image:alt", content: opts.image.alt },
-      { name: "twitter:image", content: img },
-      { name: "twitter:image:alt", content: opts.image.alt },
-    );
-  }
+  const image = opts.image ?? SHARE_IMAGE;
+  const img = absoluteUrl(image.path);
+  meta.push(
+    { property: "og:image", content: img },
+    { property: "og:image:secure_url", content: img },
+    { property: "og:image:type", content: "image/jpeg" },
+    { property: "og:image:width", content: String(image.width) },
+    { property: "og:image:height", content: String(image.height) },
+    { property: "og:image:alt", content: image.alt },
+    { name: "twitter:image", content: img },
+    { name: "twitter:image:alt", content: image.alt },
+  );
   return { meta, links: [{ rel: "canonical", href: url }] };
 }

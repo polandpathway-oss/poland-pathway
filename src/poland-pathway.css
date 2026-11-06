@@ -246,7 +246,6 @@
     .includes-grid,.europe-grid{grid-template-columns:1fr}
   }
   @media (max-width:620px){
-    .page-hero{padding:140px 0 64px}
     .europe-card{padding:28px 22px}
   }
 

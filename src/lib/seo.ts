@@ -26,7 +26,7 @@ export function socialMeta(opts: {
   image?: ShareImage;
 }) {
   const url = absoluteUrl(opts.path);
-  const meta: Array<Record<string, string>> = [
+  const meta: Array<{ title?: string; name?: string; property?: string; content?: string }> = [
     { title: opts.title },
     { name: "description", content: opts.description },
     { property: "og:site_name", content: SITE_NAME },

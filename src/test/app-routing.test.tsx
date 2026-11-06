@@ -51,7 +51,7 @@ describe("App routing", () => {
     const { meta, links } = socialMeta({ title: "T", description: "D", path: "/services", image: HOME_SHARE_IMAGE });
     const get = (key: string) => meta.find((m) => m.property === key || m.name === key)?.content;
     expect(get("og:url")).toBe("https://polandpathway.lovable.app/services");
-    expect(links[0].href).toBe("https://polandpathway.lovable.app/services");
+    expect(links[0]?.href).toBe("https://polandpathway.lovable.app/services");
     expect(get("og:image")).toBe("https://polandpathway.lovable.app/og/poland-pathway-home.jpg");
     expect(get("twitter:image")).toBe(get("og:image"));
   });

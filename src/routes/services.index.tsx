@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { EUROPE_COUNTRIES, services } from "@/lib/services";
+import { socialMeta } from "@/lib/seo";
 import { ArrowIcon, CtaSection, SiteFooter, SiteHeader, WHATSAPP, useReveal } from "@/components/site/site-parts";
 
 const TITLE = "Poland Relocation Services for Non-EU Nationals in Europe";
@@ -8,16 +9,7 @@ const DESCRIPTION =
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
-    meta: [
-      { title: TITLE },
-      { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
-      { property: "og:description", content: DESCRIPTION },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "/services" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-    links: [{ rel: "canonical", href: "/services" }],
+    ...socialMeta({ title: TITLE, description: DESCRIPTION, path: "/services", type: "website" }),
     scripts: [
       {
         type: "application/ld+json",

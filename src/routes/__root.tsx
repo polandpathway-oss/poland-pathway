@@ -84,6 +84,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: "Poland Pathway | Poland Visa & Relocation Guidance" },
       { property: "og:description", content: "Poland Pathway guides non-EU nationals living in Europe on Poland work permits, visas, study routes and relocation." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Poland Pathway" },
+      { property: "og:locale", content: "en_GB" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [

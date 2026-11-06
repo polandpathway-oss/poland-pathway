@@ -1,5 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { getService, services } from "@/lib/services";
+import { socialMeta } from "@/lib/seo";
 import {
   ArrowIcon,
   CheckIcon,
@@ -21,18 +22,13 @@ export const Route = createFileRoute("/services/$slug")({
     if (!service) {
       return { meta: [{ title: "Service not found | Poland Pathway" }, { name: "robots", content: "noindex" }] };
     }
-    const url = `/services/${service.slug}`;
     return {
-      meta: [
-        { title: service.metaTitle },
-        { name: "description", content: service.metaDescription },
-        { property: "og:title", content: service.metaTitle },
-        { property: "og:description", content: service.metaDescription },
-        { property: "og:type", content: "article" },
-        { property: "og:url", content: url },
-        { name: "twitter:card", content: "summary_large_image" },
-      ],
-      links: [{ rel: "canonical", href: url }],
+      ...socialMeta({
+        title: service.metaTitle,
+        description: service.metaDescription,
+        path: `/services/${service.slug}`,
+        type: "article",
+      }),
       scripts: [
         {
           type: "application/ld+json",

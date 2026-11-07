@@ -33,4 +33,5 @@ use the editor.
 
 - The homepage is a faithful port of the user's supplied HTML: its original class-based CSS lives in `src/poland-pathway.css` (imported from `src/styles.css`) so the page matches the source design exactly; extend that file rather than restyling with utilities.
 - Service pages are data-driven: all service copy, SEO titles and FAQs live in `src/lib/services.tsx`, rendered by `src/routes/services.$slug.tsx`; header, footer, CTA and reveal hook are shared from `src/components/site/site-parts.tsx` so every page stays identical.
+- Site images are bundled from `src/assets/` as regular imports, not `.asset.json` pointers, because the site is also deployed on Vercel where Lovable's `/__l5e/` asset paths do not exist.
 - Every page builds its title, description, canonical, Open Graph and Twitter tags through `socialMeta()` in `src/lib/seo.ts`, so share links stay absolute on the published domain and consistent across pages; the default share image is a single 1200x630 card in `public/og/` (per the user's choice of what it shows), used by every page unless a page passes its own.

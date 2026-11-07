@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import logo from "@/assets/poland-pathway-logo.png.asset.json";
+import logoSrc from "@/assets/poland-pathway-logo.png";
 import { services } from "@/lib/services";
 
 export const WHATSAPP = "https://wa.me/46764444634";
@@ -67,7 +67,7 @@ export function SiteHeader() {
     <header id="header" className={scrolled ? "scrolled" : undefined}>
       <div className="container nav">
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src={logo.url} alt="Poland Pathway Consultation Agency" className="logo-img" />
+          <img src={logoSrc} alt="Poland Pathway Consultation Agency" className="logo-img" />
         </Link>
         <ul className={menuOpen ? "nav-links open" : "nav-links"}>
           <li><Link to="/services" onClick={closeMenu}>Services</Link></li>
@@ -130,7 +130,7 @@ export function SiteFooter() {
         <div className="footer-grid">
           <div className="footer-about">
             <Link to="/">
-              <img src={logo.url} alt="Poland Pathway Consultation Agency" className="logo-img" />
+              <img src={logoSrc} alt="Poland Pathway Consultation Agency" className="logo-img" />
             </Link>
             <p>
               Helping non-EU residents of Europe move to Poland: university admission, study visas and settlement,

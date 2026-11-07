@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import slide from "@/assets/slide-1-poland.png.asset.json";
+import slideSrc from "@/assets/slide-1-poland.jpg";
 import { WHATSAPP } from "@/components/site/site-parts";
 
 const SEEN_KEY = "pp-welcome-popup-seen";
@@ -49,7 +49,7 @@ export function WelcomePopup() {
         </button>
         <a href={WHATSAPP} target="_blank" rel="noopener" onClick={close}>
           <img
-            src={slide.url}
+            src={slideSrc}
             alt="Residence permit expiring soon? Don't let your life in Europe end. See your options with Poland Pathway"
             width={1080}
             height={1350}
